@@ -1,6 +1,7 @@
 import {createApp, h} from "vue"
 import {createInertiaApp, Head, Link} from "@inertiajs/inertia-vue3"
 import {InertiaProgress} from "@inertiajs/progress"
+import Axios from 'axios'
 import "../css/app.css"
 
 const appName = window.document.getElementsByTagName("title")[0]?.innerText || import.meta.env.APP_NAME
@@ -27,3 +28,5 @@ createInertiaApp({
 })
 
 InertiaProgress.init({color: "#4B5563"})
+
+window.axios = Axios
