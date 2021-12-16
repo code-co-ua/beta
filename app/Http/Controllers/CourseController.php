@@ -15,4 +15,11 @@ class CourseController extends Controller
             'courses' => $courses,
         ]);
     }
+
+    public function show(Course $course)
+    {
+        return Inertia::render('Courses/Show', [
+            'course' => $course,
+        ]);
+    }
 }
